@@ -1,0 +1,38 @@
+<idea-plugin>
+    <id>com.daie.jrelax.id</id>
+    <name>JRelax</name>
+    <vendor email="1018905951@qq.com.com">daie</vendor>
+    <version>1.0.0</version>
+
+    <description><![CDATA[
+        idea plugin Committed to programmer's health
+
+        Regularly remind programmers to stand after a long time setting
+    ]]></description>
+
+    <change-notes><![CDATA[
+      <ul>
+        <li>Add bubble standing prompt in lower right corner</li>
+      </ul>
+    ]]></change-notes>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable instance="com.daie.jrelax.JRelaxSettingComponent"
+                                 id="com.daie.jrelax.JRelaxSettingComponent" displayName="Jrelax Settings"/>
+    </extensions>
+
+
+    <application-components>
+        <component>
+            <implementation-class>com.daie.jrelax.JRelaxApplicationComponent</implementation-class>
+        </component>
+    </application-components>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
