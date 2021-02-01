@@ -15,7 +15,7 @@ Search 'JRelax' in Idea plugins repository.
 
 ## Option 2
 
-Download [Releases](https://github.com/HappyDale/JRelax/releases/tag/1.0.0)
+Download [Releases](https://github.com/HappyDale/JRelax/releases/tag/1.0.1)
 
 # Usage
 File->Setting->Other Settings->JRelax Settings

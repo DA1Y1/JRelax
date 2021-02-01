@@ -1,6 +1,7 @@
 package com.daie.jrelax;
 
 import com.daie.jrelax.thread.StandThread;
+import com.daie.jrelax.util.JRelaxConstant;
 import com.intellij.openapi.components.ApplicationComponent;
 import com.intellij.openapi.diagnostic.Logger;
 
@@ -17,6 +18,6 @@ public class JRelaxApplicationComponent implements ApplicationComponent {
     public void initComponent() {
         logger.info("ApplicationComponent init");
 
-        new StandThread().start();
+        new StandThread(3600, JRelaxConstant.STAND_NOTICE_WORD).start();
     }
 }

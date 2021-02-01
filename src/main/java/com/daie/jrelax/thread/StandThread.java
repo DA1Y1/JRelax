@@ -1,7 +1,6 @@
 package com.daie.jrelax.thread;
 
 import com.daie.jrelax.PopNotifyUtil;
-import com.daie.jrelax.util.JRelaxConstant;
 import com.intellij.openapi.diagnostic.Logger;
 
 /**
@@ -16,23 +15,21 @@ public class StandThread extends Thread {
 
     public static final String name = "stand-plugin-thread";
 
-    private static int time = 3600 * 1000;//一小时
+    private int time = 3600;//一小时
+    private String notice;//一小时
 
-    public StandThread() {
-        this(time);
-    }
-
-    public StandThread(int time) {
+    public StandThread(int time, String notice) {
         super(name);
         this.time = time;
+        this.notice = notice;
     }
 
     @Override
     public void run() {
         try {
             while (true) {
-                PopNotifyUtil.standNotify(JRelaxConstant.standMessage);
-                Thread.sleep(time);
+                Thread.sleep(time * 1000);
+                PopNotifyUtil.standNotify(notice);
             }
         } catch (InterruptedException interruptedException) {
             logger.info("线程停止");

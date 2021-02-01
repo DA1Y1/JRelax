@@ -2,7 +2,7 @@
     <id>com.daie.jrelax.id</id>
     <name>JRelax</name>
     <vendor email="1018905951@qq.com.com">daie</vendor>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <description><![CDATA[
         idea plugin Committed to programmer's health
@@ -16,13 +16,12 @@
       </ul>
     ]]></change-notes>
 
-    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationConfigurable instance="com.daie.jrelax.JRelaxSettingComponent"
-                                 id="com.daie.jrelax.JRelaxSettingComponent" displayName="Jrelax Settings"/>
+        <applicationConfigurable instance="com.daie.jrelax.setting.JRelaxSettingComponent"
+                                 id="com.daie.jrelax.setting.JRelaxSettingComponent" displayName="Jrelax Settings"/>
+        <applicationService serviceImplementation="com.daie.jrelax.setting.TimeGapSetting"/>
     </extensions>
 
 
@@ -33,6 +32,5 @@
     </application-components>
 
     <actions>
-        <!-- Add your actions here -->
     </actions>
 </idea-plugin>
