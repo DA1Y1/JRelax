@@ -18,6 +18,6 @@ public class JRelaxApplicationComponent implements ApplicationComponent {
     public void initComponent() {
         logger.info("ApplicationComponent init");
 
-        new StandThread(3600, JRelaxConstant.STAND_NOTICE_WORD).start();
+        new StandThread(Integer.parseInt(JRelaxConstant.STAND_TIME_GAP), JRelaxConstant.STAND_NOTICE_WORD).start();
     }
 }

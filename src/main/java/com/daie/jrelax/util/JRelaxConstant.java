@@ -9,7 +9,7 @@ public class JRelaxConstant {
     public static final String ERROR_MESSAGE ="输入数值！";
     public static final String EMPTY_NOTICE="请设置提示语！";
 
-    public static final String STAND_TIME_GAP ="3600！";
+    public static final String STAND_TIME_GAP ="3600";
     public static final String STAND_NOTICE_WORD="请站立、休息或WC！";
 
 
